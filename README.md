@@ -17,7 +17,7 @@
 Склонируйте этот репозиторий на ваш локальный компьютер:
 
 ```bash
-git clone https://github.com/username/telegram-bot.git
+git clone https://github.com/Web-studio-Team3/Telegram-bot.git
 ```
 
 ### 3. Перейдите в папку проекта
