@@ -33,7 +33,7 @@ cd telegram-bot
 Создайте файл `.env` в корне проекта и добавьте ваш Telegram API токен:
 
 ```env
-BOTTOKEN=ваш_телеграм_бот_токен
+BOT_TOKEN=ваш_телеграм_бот_токен
 ```
 
 Вы можете получить токен для вашего бота у [BotFather](https://t.me/botfather) в Telegram.
