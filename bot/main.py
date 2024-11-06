@@ -22,6 +22,7 @@ async def echo(message: types.Message):
 
 
 async def main():
+    print(BOT_TOKEN)
     await dp.start_polling(bot, skip_updates=True)
 
 
