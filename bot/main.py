@@ -1,16 +1,12 @@
 import asyncio
 import os
-
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
-from dotenv import load_dotenv
+from bestconfig import Config
 
-load_dotenv()
-
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-
+BOT_TOKEN = "8086097440:AAFhdBiy7ZbLcfCBzMgTlsaGApkqJs_xvpk"
 bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 
 dp = Dispatcher(storage=MemoryStorage())
