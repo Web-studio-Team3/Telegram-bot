@@ -5,10 +5,10 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 WORKDIR /app
 
-COPY requirements.txt ./
+COPY requirements.txt /app/requirements.txt
 RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 
-COPY bot/ ./bot
+COPY . .
 
-CMD ["python", "bot/main.py"]
+CMD ["python", "main.py"]

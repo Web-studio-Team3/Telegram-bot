@@ -1,4 +1,19 @@
 services:
+  redis:
+    image: redis:latest
+    container_name: redis_container
+    command:
+      - 'redis-server'
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - REDIS_USER=${REDIS_USER}
+      - REDIS_USER_PASSWORD=${REDIS_USER_PASSWORD}
+    ports:
+      - "6380:6379"
+    volumes:
+      - ./redisdata:/data
+    networks:
+      - bot_network
   bot:
     build:
       context: .
@@ -8,17 +23,9 @@ services:
       - .env
     networks:
       - bot_network
-  redis:
-    image: redis:latest
-    container_name: redis_container
-    environment:
-      - REDIS_PASSWORD=${REDIS_PASSWORD}
-      - REDIS_USER=${REDIS_USER}
-      - REDIS_USER_PASSWORD=${REDIS_USER_PASSWORD}
-    ports:
-      - "6380:6379"
-    volumes:
-      - ./redisdata:/data
+    depends_on:
+      - redis
+
 
 networks:
   bot_network:
