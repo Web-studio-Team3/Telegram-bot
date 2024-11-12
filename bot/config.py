@@ -1,9 +1,10 @@
 import redis
 
 redis_db = redis.StrictRedis(
-    host='0.0.0.0',
+    host='redis',
     port=6379,
-    password='qwerty',
+    password='',
     charset="utf-8",
-    decode_responses=True
+    decode_responses=True,
+    db=0
 )

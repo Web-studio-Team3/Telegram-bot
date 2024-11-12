@@ -1,6 +1,6 @@
 
-from aiogram import Bot, Dispatcher, types, F
-from bot.main import dp
+from aiogram import types, F
+from main import dp
 
 
 @dp.message(F.text)
