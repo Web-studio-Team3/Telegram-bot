@@ -22,8 +22,8 @@ async def main():
     :return: Диспатчер корректно запущен и принимает обновления с ТГ
     """
     dp.include_routers(
-        ads_router,
         item_router,
+        ads_router
     )
     await dp.start_polling(bot, skip_updates=True)
     print("Succesfuly load!")
